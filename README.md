@@ -27,3 +27,61 @@ SW1(config)#int loop 0
 SW1(config-if)#ip address 1.1.1.1 255.255.255.0
 SW1(config-if)#end
 SW1#
+
+
+#Netmiko multiple devices .
+to connect ,configure and get output from multiple devices simulteniously .
+A for loop is utilised so that the script will iterate through the dectionaries and issue the commands 
+
+sample output should be along these lines :
+./netmiko2.py   
+Interface              IP-Address      OK? Method Status                Protocol
+GigabitEthernet0/0     unassigned      YES unset  up                    up      
+GigabitEthernet0/1     unassigned      YES unset  up                    up      
+GigabitEthernet0/2     unassigned      YES unset  up                    up      
+GigabitEthernet0/3     unassigned      YES unset  up                    up      
+GigabitEthernet1/0     unassigned      YES unset  up                    up      
+GigabitEthernet1/1     unassigned      YES unset  up                    up      
+GigabitEthernet1/2     unassigned      YES unset  up                    up      
+GigabitEthernet1/3     unassigned      YES unset  up                    up      
+Vlan1                  192.168.1.90    YES NVRAM  up                    up      
+configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+S1(config)#int loop 0
+S1(config-if)#ip address 1.1.1.1 255.255.255.0
+S1(config-if)#end
+S1#
+Interface              IP-Address      OK? Method Status                Protocol
+GigabitEthernet0/0     unassigned      YES unset  up                    up      
+GigabitEthernet0/1     unassigned      YES unset  up                    up      
+GigabitEthernet0/2     unassigned      YES unset  up                    up      
+GigabitEthernet0/3     unassigned      YES unset  up                    up      
+GigabitEthernet1/0     unassigned      YES unset  up                    up      
+GigabitEthernet1/1     unassigned      YES unset  up                    up      
+GigabitEthernet1/2     unassigned      YES unset  up                    up      
+GigabitEthernet1/3     unassigned      YES unset  up                    up      
+Vlan1                  192.168.1.91    YES NVRAM  up                    up      
+configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+S2(config)#int loop 0
+S2(config-if)#ip address 1.1.1.1 255.255.255.0
+S2(config-if)#end
+S2#
+Interface              IP-Address      OK? Method Status                Protocol
+GigabitEthernet0/0     unassigned      YES unset  up                    up      
+GigabitEthernet0/1     unassigned      YES unset  up                    up      
+GigabitEthernet0/2     unassigned      YES unset  up                    up      
+GigabitEthernet0/3     unassigned      YES unset  up                    up      
+GigabitEthernet1/0     unassigned      YES unset  up                    up      
+GigabitEthernet1/1     unassigned      YES unset  up                    up      
+GigabitEthernet1/2     unassigned      YES unset  up                    up      
+GigabitEthernet1/3     unassigned      YES unset  up                    up      
+Vlan1                  192.168.1.92    YES NVRAM  up                    up      
+configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+SW4(config)#int loop 0
+SW4(config-if)#ip address 1.1.1.1 255.255.255.0
+SW4(config-if)#end
+SW4#
+
+ 
