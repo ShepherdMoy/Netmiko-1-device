@@ -5,7 +5,7 @@ you have to create a dictionary and name if by the device type ,in this case
 iosv_l2
 dictionary contents are as per the script but be mindful on device type as for cisco it has to be cisco_ios  (i have not tried the script on other vendors )
 example device_type': 'cisco_ios
-after connecting and successfull authentication ,the script will run the show ip int br command and give you the output as bash output *you can redirect it to a file *
+after connecting and successfull authentication ,the script will run the show ip int br command and give you the output in the console  *you can redirect it to a file *
 the script will then move on to configure a loopback and the loopback ip address .
 below is the sample expected output :
 
